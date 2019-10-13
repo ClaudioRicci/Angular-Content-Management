@@ -1,4 +1,4 @@
-import { Item } from "../../interfaces/items";
+import { Item } from "../../interfaces/item";
 
 export const CONTENT_DATA: Item[] = [
   {
