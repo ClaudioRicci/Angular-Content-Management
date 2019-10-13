@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ContentManagementComponent } from "./content-manangement.component";
+import { ContentManagementComponent } from "./content-management.component";
 
 describe("ContentManagementComponent", () => {
   let component: ContentManagementComponent;
