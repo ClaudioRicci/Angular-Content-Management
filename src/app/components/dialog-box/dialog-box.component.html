@@ -2,13 +2,17 @@
   <strong>{{ action }} item</strong>
 </h1>
 <div mat-dialog-content>
+  <h2 *ngIf="action != 'Delete'; else elseTemplate"></h2>
+  <ng-template #elseTemplate>
+    <h2>Are you sure you want to delete {{ local_data.name }}?</h2>
+  </ng-template>
   <mat-form-field>
     <input placeholder="ID" matInput [(ngModel)]="local_data.id" />
   </mat-form-field>
   <mat-form-field>
     <input placeholder="In Stock" matInput [(ngModel)]="local_data.inStock" />
   </mat-form-field>
-  <mat-form-field *ngIf="action != 'Delete'; else elseTemplate">
+  <mat-form-field>
     <input placeholder="Name" matInput [(ngModel)]="local_data.name" />
   </mat-form-field>
   <mat-form-field>
@@ -30,10 +34,6 @@
   <mat-form-field>
     <input placeholder="Size" matInput [(ngModel)]="local_data.size" />
   </mat-form-field>
-  <ng-template #elseTemplate>
-    Are you sure you want to delete <b>{{ local_data.name }}</b
-    >?
-  </ng-template>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="doAction()">{{ action }}</button>
