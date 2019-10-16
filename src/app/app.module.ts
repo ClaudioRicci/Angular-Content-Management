@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { Routes, RouterModule } from "@angular/router";
@@ -9,6 +10,7 @@ import { MaterialModule } from "./material.module";
 import { SideNavigationComponent } from "./components/side-navigation/side-navigation.component";
 import { ContentManagementComponent } from "./components/content-management/content-management.component";
 import { UserManagementComponent } from "./components/user-management/user-management.component";
+import { DialogBoxComponent } from "./components/dialog-box/dialog-box.component";
 
 const appRoutes: Routes = [
   {
@@ -33,15 +35,18 @@ const appRoutes: Routes = [
     AppComponent,
     SideNavigationComponent,
     ContentManagementComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MaterialModule,
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
+  entryComponents: [DialogBoxComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

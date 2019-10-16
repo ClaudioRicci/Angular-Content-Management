@@ -8,7 +8,9 @@ import {
   MatListModule,
   MatToolbarModule,
   MatInputModule,
-  MatTableModule
+  MatTableModule,
+  MatDialogModule,
+  MatFormFieldModule
 } from "@angular/material";
 
 import { MatPaginatorModule } from "@angular/material/paginator";
@@ -23,7 +25,9 @@ import { MatPaginatorModule } from "@angular/material/paginator";
     MatSidenavModule,
     MatListModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatFormFieldModule
   ],
   exports: [
     CommonModule,
